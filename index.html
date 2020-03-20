@@ -1,0 +1,30 @@
+﻿<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Proyecto Matiz</title>
+		<link rel="icon" href="favicon.ico"></link>
+		<script>
+			//Javascript sacado de: http://msdn.microsoft.com/es-es/library/jj203843(v=vs.85).aspx
+			//TODO: Detectar Matiz promedio
+		</script>
+		<script src="1.js"></script>
+		<script src="9.js"></script>
+		<script src="es_navegador.js"></script>
+	</head>
+	<body onload="init(0)">
+		</p>Link del código original: <a href="http://msdn.microsoft.com/es-es/library/jj203843(v=vs.85).aspx">Muestreo de colores de imágenes con Canvas</a>; <a href="https://dl.dropboxusercontent.com/u/3906848/Proyecto%20matiz/Avión2_rgb2hsv.png">Avión convertido a HSV<a></p><button onclick="dibujar()">Dibujar</button>
+		Matiz (menor a 360): <input id="matiz" onkeyup="Deslizador3(matiz.value,true)"></input>
+		<select id="modo">
+			<option>Absoluto</option><option>Relativo</option><option>rgb2hsv</option>
+		</select>; <button onclick="convertir(matiz.value)">Convertir</button>;
+		<select id="elegirImagen">
+			<option>Pieza de Rompecabezas</option><option>Imagen de Avión</option><option>Naturaleza</option>
+		</select> >>> <button onclick="clint()">Cambiar Imagen</button>; <button onclick="Guardar()">Guardar</button>
+		<textarea id="reporte"></textarea>
+		<hr/><p id="linkguardar"></p>
+			<canvas id="cv2" width="360" height="32" onmousedown="Deslizador1(window.event)" onmousemove="Deslizador2(window.event)" onmouseup="nomp()" onmouseover="nomp()"></canvas> <<< Deslizador de matiz táctil<hr/>
+			<canvas id="cv1" width="1" height="1" onmousemove="fEVT(window.event)"></canvas>
+		<hr/>
+	</body>
+</html>
+
